@@ -1,0 +1,265 @@
+/* ============================================================
+   APPS — styles.css
+   Design tokens and typography sourced from MyTMRS (my.tmrs.com)
+   to maintain visual consistency across the tmrs.studio platform.
+   Full token set preserved here so future components inherit them
+   without needing to re-derive values from scratch.
+   ============================================================ */
+
+/* Fonts */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 1 999;
+  src: url(assets/dmsans-variable.woff2) format("woff2");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-style: italic;
+  font-weight: 1 999;
+  src: url(assets/dmsans-italic-variable.woff2) format("woff2");
+}
+
+/* Design tokens */
+:root {
+  --FONT-PRIMARY: "DM Sans", sans-serif;
+  --FONT-CURSIVE: "Euphoria Script", cursive;
+
+  /* Blues */
+  --tmrs-blue:              #0f4f99;
+  --tmrs-blue-hover:        #0f5db7;
+  --tmrs-blue-hover-rgb:    15, 93, 183;
+  --tmrs-blue-active:       #073973;
+  --tmrs-blue-inactive:     #cbe1f9;
+  --tmrs-blue-disabled:     #0f5db74d;
+  --tmrs-blue-border:       #114e99;
+  --tmrs-blue-gradient:     #0076ff;
+  --tmrs-trade-mark:        #aed3ff;
+  --tmrs-blue-2:            #044594;
+  --tmrs-blue-3:            #006be7;
+  --tmrs-blue-4:            #839cc1;
+  --tmrs-blue-5:            #f2f5ff;
+  --tmrs-blue-6:            #4c70a8;
+
+  /* Greys */
+  --grey-1:                 #cdcdcd;
+  --tmrs-grey-navlist:      #aad1ff;
+  --grey-2:                 #e3efff;
+  --grey-3:                 #eef0ef;
+  --grey-4:                 #f8f8f8;
+  --grey-5:                 #e8edf2;
+  --grey-6:                 #e0e0e0;
+  --grey-7:                 #e8e8e8;
+  --grey-100:               #f8f9fa;
+  --grey-600:               #6c757d;
+  --dark-grey:              #2c2828;
+  --dark-grey-2:            #1b2559;
+  --grey-disabled-button:   #7e9aba;
+  --grey-hover:             #eff6ff;
+  --grey-active:            #cfe4ff;
+  --grey-border:            #b3b3b3;
+  --grey-border-faded:      #b3bac2;
+  --grey-input-border:      #bfbfbf;
+  --grey-disabled:          #484848;
+  --grey-footer:            #eaf4ff;
+  --grey-table-header:      #586778;
+  --grey-table-border:      #dbdee9;
+  --grey-disabled-select-button: #6e6e6e;
+  --grey-warning:           #d9edf7;
+  --grey-border-accordion:  #dbdee9;
+  --grey-backgroud-accordion: #eef5ff;
+  --grey-content-accordion: #636c86;
+  --grey-subtext:           #586778;
+  --grey-card:              #d9d9d940;
+
+  /* RGB helpers */
+  --black-rgb:              0, 0, 0;
+  --grey-rgb:               160, 160, 160;
+  --white-rgb:              255, 255, 255;
+  --yellow-rgb:             238, 189, 0;
+  --selected-green-rgb:     15, 156, 21;
+  --blue-gray-rgb:          15, 80, 156;
+
+  /* Base colours */
+  --white:                  #ffffff;
+  --white-opaque:           #ffffffb3;
+  --black:                  #000000;
+
+  /* Links / warnings */
+  --link-red:               #d92026;
+  --warning-peach:          #f7e1d9;
+  --warning-outline:        #c70000;
+
+  /* Danger button */
+  --primary-button-danger-text:          #db0007;
+  --primary-button-danger-bg:            #ffeded;
+  --primary-button-danger-bg-hover:      #fff2f2;
+  --primary-button-danger-bg-active:     #ffdddd;
+  --primary-button-danger-text-disabled: #bf777a;
+
+  /* Outline / close buttons */
+  --outline-button-disabled:     #7794be;
+  --close-button-grey:           #464646;
+  --close-button-grey-hover:     #114e99;
+  --close-button-white-hover:    #c4e0ff;
+  --close-button-white-disabled: #4e75a5;
+
+  /* Status */
+  --green-completed-status: rgb(204, 235, 212);
+  --red-error:              #dc3545;
+  --green:                  #008b85;
+  --password-green:         #007d35;
+  --tmrs-red:               #d71f27;
+  --tmrs-red-hover:         #e63d27;
+
+  /* Layout */
+  --apps-header-height: 56px;
+
+  background-color: var(--white);
+}
+
+@media (width >= 992px) {
+  :root {
+    --apps-header-height: 70px;
+  }
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  font-family: var(--FONT-PRIMARY);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  color: var(--dark-grey);
+  background-color: var(--white);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 125%;
+  letter-spacing: -0.48px;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 133%;
+}
+
+a {
+  color: var(--tmrs-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--tmrs-blue-hover);
+  text-decoration: underline;
+}
+
+/* ── Header ── */
+.apps-header {
+  height: var(--apps-header-height);
+  background-color: var(--tmrs-blue);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.apps-header a {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.apps-header a:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.apps-header__logo {
+  height: 36px;
+  width: auto;
+}
+
+@media (width >= 992px) {
+  .apps-header {
+    padding: 0 40px;
+  }
+
+  .apps-header__logo {
+    height: 44px;
+  }
+}
+
+/* ── Main content ── */
+.apps-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.apps-main__title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.56px;
+  color: var(--tmrs-blue);
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--tmrs-blue-inactive);
+}
+
+/* ── App grid ── */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.apps-card {
+  display: block;
+  padding: 24px;
+  border: 1px solid var(--grey-5);
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--dark-grey);
+  text-decoration: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.apps-card:hover {
+  text-decoration: none;
+  border-color: var(--tmrs-blue-inactive);
+  box-shadow: 0 2px 12px rgba(var(--blue-gray-rgb), 0.12);
+  color: var(--dark-grey);
+}
+
+.apps-card__name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--tmrs-blue);
+  margin-bottom: 6px;
+}
+
+.apps-card:hover .apps-card__name {
+  color: var(--tmrs-blue-hover);
+}
+
+.apps-card__url {
+  font-size: 13px;
+  color: var(--grey-subtext);
+  letter-spacing: 0.1px;
+}
