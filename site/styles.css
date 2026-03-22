@@ -186,17 +186,7 @@ a:hover {
   font-size: var(--text-lg);
   font-weight: var(--weight-bold);
   color: #000000;
-  margin-bottom: 0.5em;
-}
-
-.apps-main__title {
-  font-size: var(--text-2xl);
-  font-weight: var(--weight-semibold);
-  letter-spacing: -0.02em;
-  color: var(--color-text-heading);
   margin-bottom: var(--space-8);
-  padding-bottom: var(--space-4);
-  border-bottom: 2px solid var(--color-border);
 }
 
 /* ── App grid ── */
