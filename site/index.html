@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Applications | TMRS</title>
   <link rel="icon" href="assets/tmrs-logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header class="apps-header">
-    <a href="https://www.tmrs.com" aria-label="TMRS home">
-      <img class="apps-header__logo" src="assets/tmrs-logo.svg" alt="TMRS" />
-    </a>
+    <div class="apps-header__inner">
+      <a href="https://www.tmrs.com" class="apps-header__brand" aria-label="TMRS home">
+        <img class="apps-header__logo" src="assets/LogoUsingAIWhiteBackground.png" alt="TMRS" />
+      </a>
+    </div>
   </header>
 
   <main class="apps-main">
@@ -26,12 +31,22 @@
       </a>
 
       <a class="apps-card" href="https://aik0.tmrs.studio">
+        <img class="apps-card__logo" src="assets/LogoAIKitchenWhiteBackground2.png" alt="AI Kitchen" />
         <div class="apps-card__name">AI Kitchen</div>
         <div class="apps-card__url">aik0.tmrs.studio</div>
       </a>
 
     </div>
   </main>
+
+  <footer class="apps-footer">
+    <span class="apps-footer__copy">© 2026 Texas Municipal Retirement System. All rights reserved.</span>
+    <nav class="apps-footer__links" aria-label="Footer navigation">
+      <a href="https://www.tmrs.com/terms">Terms</a>
+      <a href="https://www.tmrs.com/privacy">Privacy</a>
+      <a href="https://www.tmrs.com/contact-support">Contact</a>
+    </nav>
+  </footer>
 
 </body>
 </html>
