@@ -84,7 +84,7 @@
   --z-nav: 100;
 
   /* --- Layout --- */
-  --nav-height:         64px;
+  --nav-height:         72px;
   --content-max-width:  1200px;
 }
 
@@ -161,7 +161,7 @@ a:hover {
 }
 
 .apps-header__logo {
-  height: 36px;
+  height: 56px;
   width: auto;
   display: block;
 }
@@ -192,13 +192,13 @@ a:hover {
 /* ── App grid ── */
 .apps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(173px, 1fr));
   gap: var(--space-5);
 }
 
 .apps-card {
   display: block;
-  padding: var(--space-6);
+  padding: var(--space-4);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background-color: var(--color-surface-raised);
