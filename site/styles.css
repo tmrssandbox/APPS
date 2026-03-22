@@ -161,7 +161,7 @@ a:hover {
 }
 
 .apps-header__logo {
-  height: 56px;
+  height: calc(var(--nav-height) - 8px);
   width: auto;
   display: block;
 }
