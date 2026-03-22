@@ -182,6 +182,13 @@ a:hover {
   box-sizing: border-box;
 }
 
+.apps-main__presents {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: #000000;
+  margin-bottom: 0.5em;
+}
+
 .apps-main__title {
   font-size: var(--text-2xl);
   font-weight: var(--weight-semibold);
@@ -223,6 +230,11 @@ a:hover {
   height: 48px;
   width: auto;
   margin-bottom: var(--space-4);
+}
+
+.apps-card--logo-only .apps-card__logo {
+  height: 64px;
+  margin-bottom: 0;
 }
 
 .apps-card__name {
