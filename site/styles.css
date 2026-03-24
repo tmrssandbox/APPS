@@ -184,6 +184,13 @@ a:hover {
   font-size: 2.5rem;
   font-weight: var(--weight-bold);
   color: #ffffff;
+  margin-bottom: var(--space-2);
+}
+
+.apps-main__service-hours {
+  font-size: 1.667rem;
+  font-weight: var(--weight-bold);
+  color: #ffffff;
   margin-bottom: var(--space-8);
 }
 
