@@ -187,6 +187,13 @@ a:hover {
   margin-bottom: var(--space-8);
 }
 
+.apps-main__warning {
+  font-size: 2.5rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-accent);
+  margin-top: var(--space-8);
+}
+
 /* ── App grid ── */
 .apps-grid {
   display: grid;
